@@ -63,9 +63,24 @@ body {
 .header__list .header__item {
   color: #34547A;
   display: inline-block;
+  position: relative;
 }
 .header__list .header__item:not(:first-child) {
   margin-left: 42px;
+}
+.header__list .header__item::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.header__list .header__item:hover::before {
+  width: 100%;
+  background-color: red;
+  transition: width 0.3s ease-in-out, background-color 0.2s ease-in-out;
 }
 .header__list .header__item .header__link {
   color: inherit;
@@ -87,6 +102,21 @@ body {
   font-size: 48px;
   line-height: 164.5833333333%;
 }
+.writeMe .writeMe__title:hover {
+  animation: rotation 2s;
+  transform-origin: top left;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(7deg);
+  }
+}
 .writeMe .writeMe__text {
   font-size: 16px;
   line-height: 162.5%;
@@ -105,6 +135,24 @@ body {
   line-height: 162.5%;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.writeMe .writeMe__button:hover {
+  animation: btnColor 4s infinite;
+}
+@keyframes btnColor {
+  20% {
+    transform: translate(150%);
+  }
+  50% {
+    background-color: yellow;
+    color: black;
+  }
+  75% {
+    transform: translate(-50%);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 .about {
