@@ -37,7 +37,6 @@ body {
   line-height: 1;
   font-size: 16px;
   font-weight: 400;
-  font-family: "Cormorant", sans-serif;
   color: #000;
 }
 
@@ -45,37 +44,4 @@ body {
   min-height: 100%;
   overflow: hidden;
   position: relative;
-  width: 1280px;
-  height: 500px;
-  background: url("../media/brooke-lark-08bOYnH_r_E-unsplash 1.jpg") no-repeat top right;
-  background-size: contain;
-  margin: 40px auto;
-}
-.wrapper .wrapper__container {
-  margin: 125px 0 0 55px;
-}
-.wrapper .wrapper__title {
-  color: #1F1F1F;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 122%;
-}
-.wrapper .wrapper__text {
-  margin-top: 5px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 26px;
-  line-height: 150%;
-  color: #1F1F1F;
-}
-.wrapper .wrapper__button {
-  display: inline-block;
-  margin-top: 40px;
-  background-color: #FF8126;
-  color: #fff;
-  padding: 8px 36px 10px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 150%;
 }

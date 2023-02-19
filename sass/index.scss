@@ -1,84 +1,41 @@
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 ul,
 ol,
 li {
-    list-style: none;
+  list-style: none;
 }
-
 img {
-    vertical-align: top;
+  vertical-align: top;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-weight: inherit;
-    font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
-
 html,
 body {
-    height: 100%;
-    line-height: 1;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "Cormorant", sans-serif;
-    color: #000;
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
 }
-
 .wrapper {
-    min-height: 100%;
-    overflow: hidden;
-    position: relative;
-    width: 1280px;
-    height: 500px;
-    background: url("../media/brooke-lark-08bOYnH_r_E-unsplash 1.jpg") no-repeat top right;
-    background-size: contain;
-    margin: 40px auto;
-
-    & .wrapper__container {
-        margin: 125px 0 0 55px;
-    }
-    & .wrapper__title {
-        color: #1F1F1F;
-        font-weight: 700;
-        font-size: 50px;
-        line-height: calc(61 / 50 * 100%);
-    }
-
-    & .wrapper__text {
-        margin-top: 5px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 300;
-        font-size: 26px;
-        line-height: calc(39 / 26 * 100%);
-        color: #1F1F1F;
-    }
-
-    & .wrapper__button {
-        display: inline-block;
-        margin-top: 40px;
-        background-color: #FF8126;
-        color: #fff;
-        padding: 8px 36px 10px;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: calc(27 / 18 * 100%);
-    }
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
 }
