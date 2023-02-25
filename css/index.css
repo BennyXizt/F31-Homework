@@ -37,6 +37,7 @@ body {
   line-height: 1;
   font-size: 16px;
   font-weight: 400;
+  font-family: "Roboto", sans-serif;
   color: #000;
 }
 
@@ -44,4 +45,294 @@ body {
   min-height: 100%;
   overflow: hidden;
   position: relative;
+}
+
+._container {
+  max-width: 1110px;
+  margin: 0px auto;
+}
+
+.header {
+  box-shadow: inset 0 50px #EFEFEF;
+}
+
+.header__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+}
+.header__list .header__item:not(:first-child) {
+  margin-left: 30px;
+}
+.header__list .header__link {
+  display: inline-block;
+  color: inherit;
+  font-size: 14px;
+  line-height: 114.2857142857%;
+  padding: 17px 0;
+}
+
+.header-list_alt {
+  color: #000;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 25px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.header__logo .header__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo .header__title {
+  color: #F13C6E;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 116.6666666667%;
+  letter-spacing: 0.1em;
+}
+
+.sale {
+  margin-top: 30px;
+  background: url("../media/Rectangle 2.jpg") no-repeat left center/cover;
+}
+.sale .sale__container {
+  padding: 192px 0;
+  color: #FFFFFF;
+}
+.sale .sale__container > *:not(:first-child) {
+  margin-top: 50px;
+}
+.sale .sale__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 116.6666666667%;
+}
+.sale .sale__text {
+  max-width: 308px;
+  font-size: 14px;
+  line-height: 142.8571428571%;
+}
+
+._btn {
+  display: inline-block;
+  padding: 12px 49px 13px;
+  color: inherit;
+  border: 2px solid #FFFFFF;
+  border-radius: 40px;
+}
+
+.goods {
+  background-color: #EFEFEF;
+  padding: 80px 0 99px 0;
+}
+.goods .goods__title {
+  color: #000;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 116.6666666667%;
+}
+.goods .goods__list {
+  margin-top: 38px;
+}
+
+._list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+._list li {
+  width: 255px;
+  height: 363px;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 25px 30px 0;
+}
+._list li > *:not(:first-child) {
+  margin-top: 20px;
+}
+._list li p {
+  font-size: 14px;
+  line-height: 142.8571428571%;
+  text-align: center;
+}
+._list li p strong {
+  font-size: 21px;
+  line-height: 119.0476190476%;
+  letter-spacing: 0.05em;
+}
+._list li .goods__link {
+  width: 130px;
+  height: 35px;
+  padding: 9px 40px;
+  background-color: #F13C6E;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 114.2857142857%;
+  letter-spacing: 0.05em;
+}
+
+.subscribe {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #EFEFEF;
+}
+.subscribe .subscribe__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe .item-subscribe {
+  flex: 0 0 540px;
+  height: 212px;
+  background-color: #F13C6E;
+  padding: 35px 45px 35px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+}
+.subscribe .item-subscribe_left {
+  font-family: "Roboto", sans-serif;
+}
+.subscribe .item-subscribe_left > *:not(:first-child) {
+  margin-top: 25px;
+}
+.subscribe .item-subscribe_left .item-subscribe_title {
+  font-size: 18px;
+  line-height: 116.6666666667%;
+  font-weight: 700;
+}
+.subscribe .item-subscribe_left .item-subscribe_text {
+  font-size: 14px;
+  line-height: 142.8571428571%;
+  max-width: 231px;
+}
+.subscribe .item-subscribe_left .input-subscribe_input {
+  border-radius: 30px;
+  width: 225px;
+  height: 35px;
+  padding: 9px 25px;
+}
+.subscribe .item-subscribe_left .input-subscribe_input::-moz-placeholder {
+  color: #C4C4C4;
+  font-size: 14px;
+  line-height: 114.2857142857%;
+}
+.subscribe .item-subscribe_left .input-subscribe_input::placeholder {
+  color: #C4C4C4;
+  font-size: 14px;
+  line-height: 114.2857142857%;
+}
+.subscribe .item-subscribe_left .item-subscribe_button {
+  background-color: transparent;
+  font-size: 14px;
+  line-height: 114.2857142857%;
+}
+.subscribe .item-subscribe_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brands {
+  background-color: #EFEFEF;
+}
+.brands .brands__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #FFFFFF;
+}
+.brands .brands__container .brands__item {
+  padding: 35px 60px;
+}
+.brands .brands__container .brands__item:not(:nth-child(4n)) {
+  border-right: 1px solid #EFEFEF;
+}
+.brands .brands__container .brands__item {
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.footer .footer__nav {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  border-bottom: 1px solid #EFEFEF;
+}
+.footer .footer__items .footer__title {
+  font-size: 16px;
+  line-height: 137.5%;
+  font-weight: 700;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.footer .footer__items .footer__list {
+  margin-top: 25px;
+}
+.footer .footer__items .footer__list .footer__item:not(:first-child) {
+  margin-top: 5px;
+}
+.footer .footer__items .footer__list .footer__item .footer__link {
+  color: #828282;
+  font-size: 12px;
+  line-height: 233.3333333333%;
+}
+.footer .footer__middle {
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer__middle .footer__media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer .footer__middle .footer__media .footer__image:not(:first-child) {
+  margin-left: 20px;
+}
+.footer .footer__middle .footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer__middle .footer__contacts > *:not(:first-child) {
+  margin-left: 66px;
+}
+.footer .footer__middle .footer__contacts .footer__phone {
+  color: inherit;
+  font-size: 16px;
+  line-height: 118.75%;
+}
+.footer .footer__middle .footer__contacts .footer__callMe {
+  background-color: transparent;
+  border-color: #F13C6E;
+}
+.footer .footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #EFEFEF;
+  padding: 25px;
+}
+.footer .footer__bottom .footer__text {
+  color: #828282;
+  font-size: 12px;
+  line-height: 116.6666666667%;
 }
