@@ -127,6 +127,7 @@ body {
   color: inherit;
   border: 2px solid #FFFFFF;
   border-radius: 40px;
+  cursor: pointer;
 }
 
 .goods {
@@ -304,7 +305,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-.footer .footer__middle .footer__media .footer__image:not(:first-child) {
+.footer .footer__middle .footer__media .footer__link:not(:first-child) {
   margin-left: 20px;
 }
 .footer .footer__middle .footer__contacts {

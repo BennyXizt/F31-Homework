@@ -140,6 +140,7 @@ body {
     color: inherit;
     border: 2px solid $bg-white;
     border-radius: 40px;
+    cursor: pointer;
 }
 
 .goods {
@@ -339,7 +340,7 @@ body {
             justify-content: flex-start;
             align-items: center;
 
-            & .footer__image {
+            & .footer__link {
                 &:not(:first-child) {
                     margin-left: 20px;
                 }
