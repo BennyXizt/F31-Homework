@@ -44,7 +44,7 @@ body {
   position: relative;
 }
 ._container {
-    width: 1146px;
+    max-width: 1146px;
     margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@ body {
         text-align: center;
     }
     &__list {
-        @include dflex(row, wrap, space-between, center);
+        @include dflex(row, wrap, space-evenly, center);
     }
     &__item {
       flex: 0 0 362px;
@@ -75,6 +75,7 @@ body {
       background-color: #fff;
       border-radius: 20px;
       box-shadow: 40px 16px 136px rgba(0, 0, 0, 0.2);;
+      cursor: pointer;
 
       .news__content {
         padding: 30px;
@@ -108,6 +109,45 @@ body {
           transform: translate(0, -50%);
           background: url("../media/arrow.svg") no-repeat;
 
+        }
+      }
+
+      &:hover {
+        position: relative;
+        height: 502px;
+
+        .news__image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: fill;
+          opacity: .2;
+        }
+        .news__title,
+        .news__text {
+          display: none;
+        }
+        .news__link {
+          border: 1px solid $c-orange;
+          padding: 20px;
+          @include fonts("Josefin Sans", 600, 43, 56);
+        }
+      }
+
+      @media (max-width: $media1) {
+        &:nth-child(3n) {
+          margin-top: 30px;
+        }
+      }
+      @media (max-width: $media2) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &:not(:first-child) {
+          margin-top: 30px;
         }
       }
     }
