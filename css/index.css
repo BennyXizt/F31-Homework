@@ -41,6 +41,10 @@ body {
   color: #000;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -48,12 +52,59 @@ body {
 }
 
 ._container {
-  max-width: 1110px;
+  max-width: 1150px;
   margin: 0px auto;
+  padding: 0 20px;
 }
 
 .header {
   box-shadow: inset 0 50px #EFEFEF;
+}
+.header__container {
+  position: relative;
+}
+.header.active {
+  box-shadow: unset;
+}
+
+.header__burger {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 99;
+}
+.header__burger.active .header__line:nth-child(1) {
+  top: 50%;
+  transform: translate(0, -50%) rotate(45deg);
+}
+.header__burger.active .header__line:nth-child(2) {
+  display: none;
+}
+.header__burger.active .header__line:nth-child(3) {
+  bottom: 50%;
+  transform: translate(0, 50%) rotate(-45deg);
+}
+.header__burger .header__line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #F13C6E;
+  transition: all 0.3s ease-in-out;
+}
+.header__burger .header__line:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.header__burger .header__line:nth-child(2) {
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.header__burger .header__line:nth-child(3) {
+  bottom: 0;
+  left: 0;
 }
 
 .header__list {
@@ -72,11 +123,41 @@ body {
   line-height: 114.2857142857%;
   padding: 17px 0;
 }
+.header__list.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #EFEFEF;
+  width: 20vw;
+  height: 100%;
+  overflow-y: hidden;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.header__list.active .header__item {
+  margin-left: 30px;
+  width: 100%;
+}
+.header__list.active .header__item:first-child {
+  margin-top: 50px;
+}
+.header__list.active .header__item .header__link {
+  width: 100%;
+}
+@media (max-width: 590px) {
+  .header__list {
+    flex-wrap: wrap;
+  }
+  .header__list .header__link {
+    font-size: 10px;
+    line-height: 80%;
+  }
+}
 
 .header-list_alt {
   color: #000;
 }
-
 .header__logo {
   display: flex;
   justify-content: center;
@@ -98,13 +179,23 @@ body {
   line-height: 116.6666666667%;
   letter-spacing: 0.1em;
 }
+@media (max-width: 590px) {
+  .header__logo .header__title {
+    font-size: 20px;
+    line-height: 90%;
+  }
+  .header__logo .header__img {
+    width: 40px;
+    height: 40px;
+  }
+}
 
 .sale {
   margin-top: 30px;
   background: url("../media/Rectangle 2.jpg") no-repeat left center/cover;
 }
 .sale .sale__container {
-  padding: 192px 0;
+  padding: 192px 20px;
   color: #FFFFFF;
 }
 .sale .sale__container > *:not(:first-child) {
@@ -119,6 +210,11 @@ body {
   max-width: 308px;
   font-size: 14px;
   line-height: 142.8571428571%;
+}
+@media (max-width: 1200px) {
+  .sale {
+    background: url("../media/Rectangle 2.jpg") no-repeat center center/cover;
+  }
 }
 
 ._btn {
@@ -142,6 +238,11 @@ body {
 }
 .goods .goods__list {
   margin-top: 38px;
+}
+@media (max-width: 1200px) {
+  .goods {
+    padding: 40px 0;
+  }
 }
 
 ._list {
@@ -183,15 +284,43 @@ body {
   line-height: 114.2857142857%;
   letter-spacing: 0.05em;
 }
+@media (max-width: 1200px) {
+  ._list {
+    justify-content: center;
+  }
+  ._list > *:not(:nth-child(3n+1)) {
+    margin-left: 20px;
+  }
+  ._list > * {
+    margin-bottom: 20px;
+    flex: 0 0 268px;
+  }
+}
+@media (max-width: 885px) {
+  ._list > *:not(:nth-child(3n+1)) {
+    margin-left: 0;
+  }
+  ._list > *:not(:nth-child(2n+1)) {
+    margin-left: 10px;
+  }
+  ._list > * {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 590px) {
+  ._list > *:not(:nth-child(2n+1)) {
+    margin-left: 0;
+  }
+}
 
 .subscribe {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 0;
   background-color: #EFEFEF;
 }
 .subscribe .subscribe__container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
 }
 .subscribe .item-subscribe {
@@ -246,6 +375,22 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1200px) {
+  .subscribe {
+    padding: 40px 0;
+  }
+  .subscribe .subscribe__container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .subscribe .subscribe__container > * {
+    flex: 0 0 200px;
+    width: 540px;
+  }
+  .subscribe .subscribe__container > *:not(:first-child) {
+    margin-top: 30px;
+  }
+}
 
 .brands {
   background-color: #EFEFEF;
@@ -265,6 +410,13 @@ body {
 }
 .brands .brands__container .brands__item {
   border-bottom: 1px solid #EFEFEF;
+}
+@media (max-width: 590px) {
+  .brands .brands__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer .footer__nav {
@@ -336,4 +488,15 @@ body {
   color: #828282;
   font-size: 12px;
   line-height: 116.6666666667%;
+}
+@media (max-width: 885px) {
+  .footer .footer__title {
+    font-size: 12px;
+    line-height: 110%;
+    text-align: center;
+  }
+  .footer .footer__item {
+    text-align: center;
+    font-size: 8px;
+  }
 }
