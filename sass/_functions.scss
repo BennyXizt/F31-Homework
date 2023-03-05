@@ -1,0 +1,13 @@
+@mixin fonts($ff: "Josefin Sans", $fw: 400, $fsz, $lh) {
+    font-family: $ff, sans-serif;
+    font-weight: $fw;
+    font-size: $fsz + px;
+    line-height: calc($lh / $fsz * 100%);
+}
+
+@mixin dflex($dir: row, $fw: wrap, $jc, $ai) {
+    display: flex;
+    flex-flow: $dir $fw;
+    justify-content: $jc;
+    align-items: $ai;
+}
