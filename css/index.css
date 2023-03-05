@@ -158,6 +158,12 @@ body {
   font-size: 43px;
   line-height: 130.2325581395%;
 }
+.news__item:hover .news__link::after {
+  left: 50%;
+  top: unset;
+  bottom: 10px;
+  transform: translate(-50%, 0);
+}
 @media (max-width: 1085px) {
   .news__item:nth-child(3n) {
     margin-top: 30px;

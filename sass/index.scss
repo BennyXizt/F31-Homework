@@ -133,6 +133,13 @@ body {
           border: 1px solid $c-orange;
           padding: 20px;
           @include fonts("Josefin Sans", 600, 43, 56);
+
+          &::after {
+            left: 50%;
+            top: unset;
+            bottom: 10px;
+            transform: translate(-50%, 0);
+          }
         }
       }
 
