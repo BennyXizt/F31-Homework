@@ -2,13 +2,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { checked } from "../../slices/todoSlice"
 import Item from "../Item/Item"
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 export default function() {
     const dispatch = useDispatch();
     const todos = useSelector((state) => state.todo);
     const users = useSelector((state) => state.user);
     const [filterByID, setFilterByID] =useState(null)
+    const contextValue = "My Context"
   
     console.log(users);
 
@@ -19,6 +20,7 @@ export default function() {
     return (
         
         <div className='_container'>
+                {contextValue}
            <div className='users'>
            <div onClick={() => setFilterByID(null)}>
                         Show All
