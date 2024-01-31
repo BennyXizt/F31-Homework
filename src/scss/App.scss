@@ -1,0 +1,42 @@
+@import "./white";
+
+._container {
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+}
+
+.users {
+    & > * {
+        border: 1px solid black;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+    }
+    & >*:not(:first-child) {
+        margin-top: 20px;
+    }
+}
+.todos {
+    cursor: pointer;
+    margin-left: 20px;
+    & > * {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        
+
+        & > *:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+    & >*:not(:first-child) {
+        margin-top: 20px;
+        
+    }
+}
