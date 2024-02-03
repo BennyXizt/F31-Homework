@@ -1,20 +1,17 @@
-import { createContext, useContext, useEffect, useState } from "react";
-import "./css/App.css";
-import List from "./components/List/List";
-import { Route, Routes } from "react-router-dom";
 
-const DataContext = createContext()
+import "./css/App.css";
+import { Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage/MainPage";
+
+
 
 function App() {
   
 
   return (
-    <DataContext.Provider value={{ contextValue: "contextValue" }}>
     <Routes>
-      <Route path="*" element={<List />} />
+      <Route path="*" element={<MainPage />} />
     </Routes>
-  </DataContext.Provider>
-
   );
 }
 
